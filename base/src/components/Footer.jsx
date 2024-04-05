@@ -1,88 +1,43 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FaLocationArrow, FaPhone } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-
+import React from 'react'
+import { FaInstagram } from "react-icons/fa";
+import { RiFacebookFill } from "react-icons/ri";
+import { FaTwitter } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 const Footer = () => {
-  const hours = [
-    {
-      id: 1,
-      day: "Monday",
-      time: "9:00 AM - 11:00 PM",
-    },
-    {
-      id: 2,
-      day: "Tuesday",
-      time: "12:00 PM - 12:00 AM",
-    },
-    {
-      id: 3,
-      day: "Wednesday",
-      time: "10:00 AM - 10:00 PM",
-    },
-    {
-      id: 4,
-      day: "Thursday",
-      time: "9:00 AM - 9:00 PM",
-    },
-    {
-      id: 5,
-      day: "Monday",
-      time: "3:00 PM - 9:00 PM",
-    },
-    {
-      id: 6,
-      day: "Saturday",
-      time: "9:00 AM - 3:00 PM",
-    },
-  ];
-
   return (
-    <>
-      <footer className={"container"}>
-        <hr />
-        <div className="content">
-          <div>
-            <img src="/logo.png" alt="logo" className="logo-img"/>
+    <div className='footer'>
+      <footer>
+        <div className='container1'>
+          <div className='sec aboutus'>
+            <h2>About us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium ipsum voluptates corrupti itaque deserunt eligendi, animi rerum tempora id! Unde exercitationem, temporibus nam alias, adipisci nisi ut recusandae nihil dignissimos quas voluptas, numquam soluta voluptatum saepe voluptatibus ratione laboriosam!</p>
+          <ul className='sci'>
+            <li><a href=""></a><RiFacebookFill  className='i' /></li>
+            <li><a href=""></a><FaInstagram  className='i' /></li>
+            <li><a href=""></a><FaTwitter  className='i'  /></li>
+            <li><a href=""></a><FaYoutube  className='i'  /></li>
+          </ul>
           </div>
-          <div>
-            <h4>Quick Links</h4>
-            <ul>
-              <Link to={"/"}>Home</Link>
-              <Link to={"/appointment"}>Appointment</Link>
-              <Link to={"/about"}>About</Link>
+          <div className='sec quicklinks i' ><h2>Home</h2></div>
+          <div className='sec quicklinks i'><h2>Appointment</h2></div>
+          <div className='sec contact i'>
+            <h2>Contact</h2>
+            <ul className='info i'>
+              <li>
+                <span><FaPhoneAlt /></span><p><a href="#">+91 9849713249</a></p>
+              </li>
+              <li>
+                <span><IoMdMail /></span><p><a href="#">pavan3457.us@gmail.com</a></p>
+              </li>
             </ul>
-          </div>
-          <div>
-            <h4>Hours</h4>
-            <ul>
-              {hours.map((element) => (
-                <li key={element.id}>
-                  <span>{element.day}</span>
-                  <span>{element.time}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4>Contact</h4>
-            <div>
-              <FaPhone />
-              <span>999-999-9999</span>
             </div>
-            <div>
-              <MdEmail />
-              <span>zeelab@gmail.com</span>
-            </div>
-            <div>
-              <FaLocationArrow />
-              <span>Karachi, Pakistan</span>
-            </div>
-          </div>
         </div>
       </footer>
-    </>
-  );
-};
+      <div className='copy-right'>Copyright 2024 404 Not Found.All right reseverd</div>
+    </div>
+  )
+}
 
-export default Footer;
+export default Footer
